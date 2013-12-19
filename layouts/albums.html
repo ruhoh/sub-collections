@@ -1,0 +1,22 @@
+
+
+<h2> Generic Album layout </h2>
+
+<h3>Album Title</h3>
+<blockquote>{{ page.title }}</blockquote>
+
+<h3>Album page content</h3>
+<blockquote>
+  {{{ content }}}
+</blockquote>
+
+
+<h3>Track Listings</h3>
+<ul>
+{{# page.filter.tracks/ }}
+  <li>
+    <a href="{{ url }}">({{ title }}) {{ url }}</a>
+  </li>
+{{/ page.filter.tracks/ }}
+</ul>
+
